@@ -73,7 +73,7 @@ export default function Header() {
           {/* Zone 3: CTA Action & Mobile Hamburger */}
           <div className="flex items-center gap-3">
             <Button
-              href="#pricing"
+              href="#plans"
               variant="primary"
               size="sm"
               className="hidden sm:inline-flex text-xs uppercase tracking-wider"
@@ -118,7 +118,7 @@ export default function Header() {
               ))}
               <div className="pt-4 border-t border-[#E5CDBB]/70 flex flex-col gap-2">
                 <Button
-                  href="#pricing"
+                  href="#plans"
                   variant="primary"
                   className="w-full text-center"
                   onClick={() => setMobileMenuOpen(false)}

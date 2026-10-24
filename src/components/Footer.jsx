@@ -99,19 +99,23 @@ export default function Footer() {
               Contact Us
             </h4>
             <ul className="space-y-3 text-sm text-[#FBF5EF]/85">
-              {footer.columns.contact.map((item, idx) => (
-                <li key={idx} className="flex items-center gap-2.5">
-                  {idx === 0 && <Mail className="w-4 h-4 shrink-0 text-white/70" />}
-                  {idx === 1 && <Phone className="w-4 h-4 shrink-0 text-white/70" />}
-                  {idx === 2 && <MapPin className="w-4 h-4 shrink-0 text-white/70" />}
-                  <a
-                    href={item.href}
-                    className="hover:text-white transition-colors break-all"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
+              {footer.columns.contact.map((item, idx) => {
+                const isMail = item.href.startsWith('mailto:');
+                const isPhone = item.href.startsWith('tel:');
+                return (
+                  <li key={idx} className="flex items-center gap-2.5">
+                    {isMail && <Mail className="w-4 h-4 shrink-0 text-white/70" />}
+                    {isPhone && <Phone className="w-4 h-4 shrink-0 text-white/70" />}
+                    {!isMail && !isPhone && <MapPin className="w-4 h-4 shrink-0 text-white/70" />}
+                    <a
+                      href={item.href}
+                      className="hover:text-white transition-colors break-all"
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
             <p className="mt-3 text-xs text-[#FBF5EF]/60 italic">
               // PLACEHOLDER – contact info for review
@@ -119,7 +123,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Giant DevLix Wordmark spanning width */}
+        {/* Giant Devnoid Wordmark spanning width */}
         <div className="w-full select-none overflow-hidden text-center pt-8 pb-4">
           <p
             className="font-display uppercase tracking-tight text-white leading-[0.8] transition-transform duration-300"

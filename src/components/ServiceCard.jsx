@@ -5,6 +5,7 @@ import {
   Layers,
   Cpu,
   Database,
+  Bot,
   ArrowUpRight,
 } from 'lucide-react';
 
@@ -14,6 +15,7 @@ const iconMap = {
   layers: Layers,
   cpu: Cpu,
   database: Database,
+  bot: Bot,
 };
 
 export default function ServiceCard({ service }) {

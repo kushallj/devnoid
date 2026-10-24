@@ -1,5 +1,5 @@
 /**
- * DevLix Landing Page Content Data
+ * Devnoid Landing Page Content Data
  * NOTE: Where text in the reference screenshot was unreadable due to compression,
  * plausible, clearly editable placeholder copy is provided below, marked with
  * "// PLACEHOLDER – review before launch". Never present invented content as verified.
@@ -7,9 +7,9 @@
 
 export const siteContent = {
   brand: {
-    name: "DevLix",
-    tagline: "Digital Products That Power Growth",
-    wordmark: "DevLix",
+    name: "Devnoid",
+    tagline: "Digital Products & AI Systems That Power Growth",
+    wordmark: "Devnoid",
   },
 
   navigation: [
@@ -17,7 +17,7 @@ export const siteContent = {
     { label: "Services", href: "#services" },
     { label: "Process", href: "#process" },
     { label: "Projects", href: "#projects" },
-    { label: "Pricing", href: "#pricing" },
+    { label: "Plans", href: "#plans" },
     { label: "FAQ", href: "#faq" },
   ],
 
@@ -28,10 +28,10 @@ export const siteContent = {
       "THAT POWER GROWTH"
     ],
     // PLACEHOLDER – review before launch
-    supportingText: "We design and engineer bespoke software platforms, high-performance web applications, and resilient digital products that scale with your ambitions.",
+    supportingText: "We design and engineer bespoke software platforms, autonomous AI systems, high-performance web applications, and resilient digital architectures that scale with your ambitions.",
     primaryCta: {
       label: "Start Your Project",
-      href: "#pricing"
+      href: "#plans"
     },
     secondaryCta: {
       label: "Plan The Work",
@@ -57,19 +57,18 @@ export const siteContent = {
     }
   ],
 
-  // Collaboration photograph (Section D)
-  collaborationPhoto: {
-    src: "/images/collaboration.jpg",
-    alt: "Two smiling developers reviewing code together at a laptop in a modern warm-lit office",
-    // PLACEHOLDER – review before launch
-    captionNote: "DevLix Core Architecture & Engineering Team"
+  // Futuristic tech core visual (Section D - futuristic tech, no human figures)
+  futuristicVisual: {
+    title: "NEURAL ARCHITECTURE & AUTONOMOUS SYSTEMS",
+    captionNote: "Devnoid Autonomous Infrastructure & Neural Processing Matrix",
+    description: "High-throughput computational core powering multi-agent pipelines and resilient cloud architectures."
   },
 
-  // Services (Section E)
+  // Services (Section E - exactly 6 cards now in a balanced 3x2 grid)
   services: {
     title: "END-TO-END DEVELOPMENT SERVICES",
     // PLACEHOLDER – review before launch
-    description: "From concept to launch, we build scalable, high-performance digital products that drive real business results.",
+    description: "From concept to launch, we build scalable, high-performance digital products and intelligent systems that drive real business results.",
     cta: {
       label: "See All Services",
       href: "#services-grid"
@@ -114,6 +113,14 @@ export const siteContent = {
         description: "High-throughput APIs, event-driven microservices, distributed databases, and bulletproof integrations.",
         tags: ["REST & GraphQL", "Node.js", "PostgreSQL", "Cloud"],
         icon: "database"
+      },
+      {
+        id: "ai-agents",
+        title: "AI Agents",
+        // PLACEHOLDER – review before launch
+        description: "Autonomous agent architectures, multi-agent workflows, tool-calling pipelines, and fine-tuned LLM systems that automate complex business processes.",
+        tags: ["Autonomous Agents", "Multi-Agent", "LLM Workflows", "Tool Calling"],
+        icon: "bot"
       }
     ]
   },
@@ -162,11 +169,11 @@ export const siteContent = {
     },
     items: [
       {
-        id: "audiostream",
+        id: "workflow-automation",
         // PLACEHOLDER – review before launch
-        name: "AudioStream",
-        category: "Real-Time Audio & Streaming Platform",
-        graphicType: "waveform"
+        name: "Integromat FlowEngine",
+        category: "Visual Workflow Automation & iPaaS Platform",
+        graphicType: "workflow"
       },
       {
         id: "flowtrack",
@@ -185,43 +192,49 @@ export const siteContent = {
     ]
   },
 
-  // Pricing (Section H)
-  pricing: {
-    title: "SIMPLE, TRANSPARENT PRICING",
+  // Engagement Plans (Section H - innovative plans without numeric dollar pricing)
+  plans: {
+    title: "FLEXIBLE ENGAGEMENT PLANS",
     // PLACEHOLDER – review before launch
-    description: "Predictable engineering plans tailored for startups and scaling companies.",
-    plans: [
+    description: "Predictable engineering engagement models tailored for rapid validation, MVP launches, and scalable platform expansion.",
+    items: [
       {
         id: "starter",
         name: "Starter Plan",
-        price: "$799",
+        badge: "Rapid MVP Sprint",
+        cadence: "2–3 Weeks",
+        cadenceLabel: "Target Delivery",
+        model: "Milestone-Driven",
         // PLACEHOLDER – review before launch
-        description: "Perfect for validating early-stage MVPs and prototypes with velocity.",
+        description: "Engineered for early-stage founders and focused teams seeking to validate an MVP or build a key product pillar with speed and structural integrity.",
         features: [
-          "End-to-end agile sprint delivery",
-          "Responsive, accessible web UI",
-          "Modern tech stack setup",
-          "Continuous status & communication",
-          "2-week delivery target",
-          "30 days post-launch support"
+          "End-to-end agile sprint delivery & milestone reviews",
+          "Responsive, accessible web UI architecture",
+          "Production-ready tech stack & API foundation",
+          "Direct communication with dedicated engineers",
+          "Milestone-based delivery checkpoints",
+          "30 days post-launch support & warranty"
         ],
-        ctaText: "Get Started"
+        ctaText: "Request Starter Scope"
       },
       {
         id: "growth",
         name: "Growth Plan",
-        price: "$2,499",
+        badge: "Dedicated Pod",
+        cadence: "Continuous",
+        cadenceLabel: "Sprint Cadence",
+        model: "Full-Cycle Squad",
         // PLACEHOLDER – review before launch
-        description: "Comprehensive software engineering for high-growth platforms and teams.",
+        description: "Comprehensive software and autonomous AI engineering for high-growth platforms, multi-tenant architectures, and enterprise scale.",
         features: [
-          "Full-stack web & mobile apps",
-          "Custom UI & UX design system",
-          "Microservices & API architecture",
-          "Automated testing & CI/CD",
-          "SEO & performance setup",
-          "Priority delivery & ongoing retainer"
+          "Full-stack web, mobile & autonomous AI agent systems",
+          "Custom design system & UI/UX interactive prototyping",
+          "Distributed microservices & high-throughput APIs",
+          "Automated CI/CD pipelines & test suites",
+          "Cloud infrastructure & observability orchestration",
+          "Dedicated squad lead & priority support"
         ],
-        ctaText: "Get Started"
+        ctaText: "Request Growth Scope"
       }
     ]
   },
@@ -234,7 +247,7 @@ export const siteContent = {
       {
         id: "t1",
         // PLACEHOLDER – review before launch
-        quote: "DevLix transformed our complex requirements into a streamlined SaaS platform that our users adore.",
+        quote: "Devnoid transformed our complex requirements into a streamlined SaaS platform that our users adore.",
         name: "Marcus Vance",
         role: "Founder, PulseTech (placeholder)",
         initials: "MV"
@@ -242,7 +255,7 @@ export const siteContent = {
       {
         id: "t2",
         // PLACEHOLDER – review before launch
-        quote: "Their technical rigor and proactive communication made our mobile product launch an absolute success.",
+        quote: "Their technical rigor and autonomous agent integration made our product launch an absolute success.",
         name: "Elena Rostova",
         role: "VP Product, FinStream (placeholder)",
         initials: "ER"
@@ -258,7 +271,7 @@ export const siteContent = {
       {
         id: "t4",
         // PLACEHOLDER – review before launch
-        quote: "Fast delivery, clean code, and unmatched architectural depth. They feel like an elite internal team.",
+        quote: "Fast delivery, clean code, and unmatched architectural depth. They feel like an elite internal squad.",
         name: "Sarah Lindqvist",
         role: "Head of Tech, Lumina (placeholder)",
         initials: "SL"
@@ -290,7 +303,7 @@ export const siteContent = {
       {
         id: "faq-1",
         question: "What type of projects do you take on?",
-        answer: "We specialize in end-to-end web applications, mobile platforms (iOS & Android), SaaS products, custom cloud architectures, and API integrations for startups and growth-stage businesses."
+        answer: "We specialize in end-to-end web applications, mobile platforms (iOS & Android), autonomous AI agents, SaaS products, custom cloud architectures, and API integrations for startups and growth-stage businesses."
       },
       {
         id: "faq-2",
@@ -318,7 +331,7 @@ export const siteContent = {
   // Footer (Section K)
   footer: {
     // PLACEHOLDER – review before launch
-    blurb: "DevLix builds scalable digital products, SaaS applications, custom software, and modern web experiences that power business growth.",
+    blurb: "Devnoid builds scalable digital products, autonomous AI agents, SaaS applications, custom software, and modern web experiences that power business growth.",
     socials: [
       { name: "GitHub", href: "#", label: "GitHub (placeholder)" },
       { name: "Twitter", href: "#", label: "Twitter / X (placeholder)" },
@@ -331,23 +344,23 @@ export const siteContent = {
         { label: "Services", href: "#services" },
         { label: "Process", href: "#process" },
         { label: "Projects", href: "#projects" },
-        { label: "Pricing", href: "#pricing" },
+        { label: "Plans", href: "#plans" },
         { label: "FAQ", href: "#faq" }
       ],
       services: [
         { label: "Web Development", href: "#services" },
         { label: "Mobile App Development", href: "#services" },
+        { label: "AI Agents", href: "#services" },
         { label: "SaaS Products", href: "#services" },
         { label: "Custom Software", href: "#services" },
         { label: "Backend & APIs", href: "#services" }
       ],
       contact: [
-        // PLACEHOLDER – review before launch
-        { label: "hello@devlix.example.com", href: "mailto:hello@devlix.example.com" },
-        { label: "+1 (555) 019-2834", href: "tel:+15550192834" },
-        { label: "San Francisco, CA", href: "#" }
+        { label: "devnoid@outlook.com", href: "mailto:devnoid@outlook.com" },
+        { label: "Delhi, India", href: "#" },
+        { label: "Kolkata, India", href: "#" }
       ]
     },
-    wordmark: "DevLix"
+    wordmark: "Devnoid"
   }
 };

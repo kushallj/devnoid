@@ -1,12 +1,13 @@
-# DevLix — Digital Product & Software Development Agency
+# Devnoid — Digital Product & AI Systems Development Agency
 
-DevLix is a production-ready, single-page landing site for a high-end software development agency, engineered with React, Vite, Tailwind CSS, Bebas Neue display typography, and Inter UI/body typography.
+Devnoid is a production-ready, single-page landing site for a software and autonomous AI engineering agency, built with React, Vite, Tailwind CSS, Bebas Neue display typography, and Inter UI/body typography.
 
-Built with high visual fidelity to the brand design language:
+Built with high visual fidelity:
 - Continuous burnt-orange (`#A9430A`) outer frame surrounding a warm cream (`#FBF5EF`) canvas.
-- Alternating saturated burnt-orange sections (Highlight panels, Development Process panel, Pricing cards, Active FAQ row, and Footer).
+- Alternating saturated burnt-orange sections (Highlight panels, Development Process panel, Engagement Plans, Active FAQ row, and Footer).
+- Futuristic technological neural architecture core visual (no human figures, pure technological geometry).
 - Bebas Neue headline scale with fluid `clamp()` sizing and zero layout shift.
-- Full section sequence: Header, Hero, Highlights, Team Photograph, Services (3+2 card grid), Process Timeline, Product Showcase, Pricing, Testimonials, FAQ Accordion, and Footer with oversized full-width wordmark.
+- Full section sequence: Header, Hero, Highlights, Futuristic Architecture Matrix, Services (6-card grid including AI Agents), Process Timeline, Product Showcase, Engagement Plans, Testimonials, FAQ Accordion, and Footer with oversized full-width Devnoid wordmark.
 
 ---
 
@@ -40,31 +41,34 @@ Spins up a local server to test the production build output.
 ## Content & Asset Customization
 
 ### 1. Editing Site Copy & Metadata
-All text content, navigation links, services, pricing plans, testimonials, FAQs, and contact links are centralized in a single configuration file:
+All text content, navigation links, services, engagement plans, testimonials, FAQs, and contact links are centralized in:
 - **`src/data/siteContent.js`**
 
-Where text in the initial reference was compressed or unreadable, editable placeholder copy is clearly documented with `// PLACEHOLDER – review before launch`. Simply update the strings in `siteContent.js` before going to production.
+Where text is editable for your specific offerings, placeholder copy is documented with `// PLACEHOLDER – review before launch`.
 
-### 2. Replacing Placeholder Images
-- **Collaboration Team Photo**:
-  - Located at `/public/images/collaboration.jpg`.
-  - Recommended aspect ratio: `16:7` (desktop) or `4:3` (mobile), warm orange/amber grade with centered face focus.
-- **Product Showcase Graphics**:
-  - Located in `src/sections/Products.jsx`.
-  - Currently rendered using clean, scalable vector SVG line-art (Waveform, Radar, Topography).
-  - Can be swapped with live product screenshots by replacing the graphic components with `<img>` tags pointing to assets in `/public/images/`.
-- **Favicon**:
-  - Located at `/public/favicon.svg`.
+### 2. Services Grid
+The services grid includes 6 core capabilities:
+1. Web Development
+2. Mobile App Development
+3. SaaS Product Development
+4. Custom Software Solutions
+5. Backend & API Development
+6. AI Agents (Autonomous agent architectures & multi-agent orchestration)
+
+### 3. Engagement Plans (Innovative Delivery Models)
+Dollar pricing has been replaced with delivery cadence and scope models:
+- **Starter Plan**: Rapid MVP Sprint (2–3 weeks turnaround, milestone-driven delivery, custom scope).
+- **Growth Plan**: Dedicated Pod (Continuous sprint cadence, full-cycle squad, distributed architecture).
 
 ---
 
 ## Deploying to Vercel
 
-1. Push this repository to GitHub or GitLab.
+1. Push this repository to GitHub or GitLab (`github.com/kushallj/devnoid`).
 2. In the Vercel dashboard, click **"Add New Project"** and import the repository.
 3. Configure project settings:
    - **Framework Preset**: `Vite`
    - **Build Command**: `npm run build`
    - **Output Directory**: `dist`
    - **Install Command**: `npm install`
-4. Click **Deploy**. Vercel will build and serve the static application globally on its high-speed Edge Network.
+4. Click **Deploy**.

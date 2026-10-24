@@ -12,19 +12,19 @@ import FAQ from './sections/FAQ.jsx';
 import Footer from './components/Footer.jsx';
 
 /**
- * DevLix Landing Page
+ * Devnoid Landing Page
  * Full section sequence matching reference visual source of truth:
  * 1. Header / navigation
  * 2. Hero (headline, supporting copy, CTAs)
  * 3. Two orange highlight panels
- * 4. Wide collaboration photograph
- * 5. Services intro + service card grid (3+2 cards)
+ * 4. Futuristic neural architecture showcase
+ * 5. Services intro + service card grid (6 cards including AI Agents)
  * 6. Development process (large orange panel with timeline)
  * 7. Product showcase (3 line-art tiles)
- * 8. Pricing (two orange cards)
+ * 8. Flexible engagement plans (innovative delivery models)
  * 9. Testimonials (6 cards)
  * 10. FAQ accordion (5 rows, first open by default)
- * 11. Footer with oversized wordmark
+ * 11. Footer with oversized Devnoid wordmark
  */
 export default function App() {
   return (

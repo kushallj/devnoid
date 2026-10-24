@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { siteContent } from '../data/siteContent.js';
 
-function WaveformGraphic() {
+function IntegromatWorkflowGraphic() {
   return (
     <svg
       viewBox="0 0 240 180"
@@ -12,27 +12,109 @@ function WaveformGraphic() {
       aria-hidden="true"
     >
       <rect width="240" height="180" fill="#F5E6DA" />
-      {/* Dynamic Sound Waveform bars */}
-      {[
-        15, 25, 45, 75, 110, 140, 85, 40, 60, 95, 130, 160, 120, 80, 50, 30,
-        70, 115, 150, 100, 60, 35, 20
-      ].map((height, i) => {
-        const x = 20 + i * 9;
-        const y1 = 90 - height / 2;
-        const y2 = 90 + height / 2;
-        return (
-          <line
-            key={i}
-            x1={x}
-            y1={y1}
-            x2={x}
-            y2={y2}
-            strokeWidth="3.2"
-            strokeLinecap="round"
-            opacity={0.35 + (height / 160) * 0.65}
-          />
-        );
-      })}
+
+      {/* Grid dots background */}
+      <pattern id="dotPattern" width="16" height="16" patternUnits="userSpaceOnUse">
+        <circle cx="8" cy="8" r="0.8" fill="#A9430A" fillOpacity="0.18" />
+      </pattern>
+      <rect width="240" height="180" fill="url(#dotPattern)" />
+
+      {/* Curved connector pipelines connecting Integromat / Make modules */}
+      {/* Node 1 to Router */}
+      <path
+        d="M 44 90 C 65 90, 75 90, 96 90"
+        stroke="#A9430A"
+        strokeWidth="2"
+        strokeDasharray="4 3"
+      />
+      {/* Router to Top Branch (Database / Webhook) */}
+      <path
+        d="M 116 90 C 135 90, 145 48, 184 48"
+        stroke="#A9430A"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+      {/* Router to Middle Branch (AI Agent / Transform) */}
+      <path
+        d="M 116 90 C 140 90, 155 90, 184 90"
+        stroke="#A9430A"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      {/* Router to Bottom Branch (API / Notification) */}
+      <path
+        d="M 116 90 C 135 90, 145 132, 184 132"
+        stroke="#A9430A"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+
+      {/* Filter diamonds on connection branches */}
+      <g transform="translate(142, 64) rotate(45)">
+        <rect x="-4" y="-4" width="8" height="8" fill="#FFFFFF" stroke="#A9430A" strokeWidth="1" />
+      </g>
+      <g transform="translate(142, 116) rotate(45)">
+        <rect x="-4" y="-4" width="8" height="8" fill="#FFFFFF" stroke="#A9430A" strokeWidth="1" />
+      </g>
+
+      {/* Flow data packets */}
+      <circle cx="70" cy="90" r="2.5" fill="#A9430A" />
+      <circle cx="150" cy="90" r="2.5" fill="#A9430A" />
+      <circle cx="160" cy="54" r="2.5" fill="#A9430A" />
+      <circle cx="160" cy="126" r="2.5" fill="#A9430A" />
+
+      {/* Module 1: Trigger / Webhook (Integromat circular module) */}
+      <g transform="translate(34, 90)">
+        <circle cx="0" cy="0" r="18" fill="#FFFFFF" stroke="#A9430A" strokeWidth="1.8" />
+        <circle cx="0" cy="0" r="24" stroke="#A9430A" strokeWidth="0.8" strokeDasharray="3 3" opacity="0.6" />
+        {/* Trigger lightning / play icon */}
+        <path d="M -2 -7 L 4 -1 L -1 0 L 1 7 L -4 1 L 0 0 Z" fill="#A9430A" />
+        <rect x="-14" y="22" width="28" height="8" rx="2" fill="#A9430A" />
+        <text x="0" y="28" fill="#FFFFFF" fontSize="5" fontFamily="monospace" textAnchor="middle">WATCH</text>
+      </g>
+
+      {/* Module 2: Router Hub */}
+      <g transform="translate(106, 90)">
+        <circle cx="0" cy="0" r="16" fill="#A9430A" stroke="#FFFFFF" strokeWidth="1.5" />
+        <circle cx="0" cy="0" r="4" fill="#FFFFFF" />
+        <path d="M -6 0 L 6 0 M 3 -4 L 7 0 L 3 4" stroke="#FFFFFF" strokeWidth="1.2" strokeLinecap="round" />
+        <rect x="-16" y="20" width="32" height="8" rx="2" fill="#A9430A" opacity="0.9" />
+        <text x="0" y="26" fill="#FFFFFF" fontSize="5" fontFamily="monospace" textAnchor="middle">ROUTER</text>
+      </g>
+
+      {/* Module 3: Top Endpoint (Database / Cloud) */}
+      <g transform="translate(198, 48)">
+        <circle cx="0" cy="0" r="15" fill="#FFFFFF" stroke="#A9430A" strokeWidth="1.6" />
+        <ellipse cx="0" cy="-4" rx="6" ry="2" fill="#A9430A" fillOpacity="0.2" stroke="#A9430A" strokeWidth="1" />
+        <path d="M -6 -4 L -6 4 C -6 6, 6 6, 6 4 L 6 -4" stroke="#A9430A" strokeWidth="1" fill="none" />
+        <text x="0" y="23" fill="#A9430A" fontSize="5" fontFamily="monospace" textAnchor="middle">SQL DB</text>
+      </g>
+
+      {/* Module 4: Middle Endpoint (AI Agent LLM node) */}
+      <g transform="translate(198, 90)">
+        <circle cx="0" cy="0" r="15" fill="#FFFFFF" stroke="#A9430A" strokeWidth="1.6" />
+        <circle cx="0" cy="0" r="4" fill="#A9430A" />
+        <circle cx="-5" cy="-5" r="1.5" fill="#A9430A" />
+        <circle cx="5" cy="-5" r="1.5" fill="#A9430A" />
+        <circle cx="5" cy="5" r="1.5" fill="#A9430A" />
+        <line x1="0" y1="0" x2="-5" y2="-5" stroke="#A9430A" strokeWidth="0.8" />
+        <line x1="0" y1="0" x2="5" y2="-5" stroke="#A9430A" strokeWidth="0.8" />
+        <line x1="0" y1="0" x2="5" y2="5" stroke="#A9430A" strokeWidth="0.8" />
+        <text x="0" y="23" fill="#A9430A" fontSize="5" fontFamily="monospace" textAnchor="middle">AI AGENT</text>
+      </g>
+
+      {/* Module 5: Bottom Endpoint (API / Dispatch) */}
+      <g transform="translate(198, 132)">
+        <circle cx="0" cy="0" r="15" fill="#FFFFFF" stroke="#A9430A" strokeWidth="1.6" />
+        <rect x="-6" y="-4" width="12" height="8" rx="1" fill="#A9430A" fillOpacity="0.2" stroke="#A9430A" strokeWidth="1" />
+        <path d="M -6 -4 L 0 1 L 6 -4" stroke="#A9430A" strokeWidth="1" fill="none" />
+        <text x="0" y="23" fill="#A9430A" fontSize="5" fontFamily="monospace" textAnchor="middle">DISPATCH</text>
+      </g>
+
+      {/* Status indicator badge */}
+      <rect x="14" y="14" width="58" height="14" rx="3" fill="#FFFFFF" stroke="#A9430A" strokeWidth="0.8" opacity="0.95" />
+      <circle cx="21" cy="21" r="2" fill="#22C55E" />
+      <text x="27" y="24" fill="#A9430A" fontSize="6" fontFamily="monospace" fontWeight="bold">FLOW ACTIVE</text>
     </svg>
   );
 }
@@ -94,7 +176,7 @@ export default function Products() {
   const { products } = siteContent;
 
   const graphicMap = {
-    waveform: WaveformGraphic,
+    workflow: IntegromatWorkflowGraphic,
     radar: RadarGraphic,
     topography: TopographyGraphic,
   };
@@ -135,7 +217,7 @@ export default function Products() {
         {/* 3 product tiles side by side */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7">
           {products.items.map((item) => {
-            const Graphic = graphicMap[item.graphicType] || WaveformGraphic;
+            const Graphic = graphicMap[item.graphicType] || IntegromatWorkflowGraphic;
             return (
               <div
                 key={item.id}
