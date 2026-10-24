@@ -1,0 +1,8 @@
+{
+  "name": "DevLix",
+  "description": "DevLix is a software development agency crafting scalable digital products, SaaS platforms, custom software, and modern web applications that power growth.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

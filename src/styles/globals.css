@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #A9430A;
+    --color-primary-hover: #84320A;
+    --color-background: #FBF5EF;
+    --color-surface-muted: #F5E6DA;
+    --color-text: #33251D;
+    --color-text-muted: #6B5646;
+    --color-border: #E5CDBB;
+    --color-white: #FFFFFF;
+    --color-disabled: #C9B5A6;
+    --color-focus: #33251D;
+    --font-display: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+    --font-body: "Inter", system-ui, sans-serif;
+    --container-max: 1200px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --transition: 200ms ease;
+  }
+
+  html {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    scroll-behavior: smooth;
+  }
+
+  /* Accessible focus rings */
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  .focus-ring-light:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 2px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom utility styles */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.bg-canvas {
+  background-color: var(--color-background);
+}
+
+.bg-primary-orange {
+  background-color: var(--color-primary);
+}
+
+.bg-surface-muted {
+  background-color: var(--color-surface-muted);
+}
+
+.text-brand-dark {
+  color: var(--color-text);
+}
+
+.text-brand-muted {
+  color: var(--color-text-muted);
+}
+
+.border-brand {
+  border-color: var(--color-border);
+}
+
+/* Giant wordmark scaling without clipping */
+.giant-wordmark {
+  font-size: clamp(4.5rem, 23.5vw, 22rem);
+  line-height: 0.82;
+  letter-spacing: -0.01em;
+}
+
+/* Fluid section headings */
+.headline-h1 {
+  font-size: clamp(2.75rem, 7vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+}
+
+.headline-h2 {
+  font-size: clamp(2.25rem, 4.5vw, 4rem);
+  line-height: 1;
+}
+
+.headline-h3 {
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  line-height: 1.1;
+}
