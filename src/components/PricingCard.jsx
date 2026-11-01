@@ -1,9 +1,10 @@
 import React from 'react';
-import { Check, Clock, Layers, Zap, ArrowUpRight } from 'lucide-react';
+import { Check, Clock, ArrowUpRight } from 'lucide-react';
+import { useBooking } from '../context/BookingContext.jsx';
 import Button from './Button.jsx';
 
 export default function PricingCard({ plan }) {
-  const isStarter = plan.id === 'starter';
+  const { openBooking } = useBooking();
 
   return (
     <div className="flex flex-col justify-between bg-[#A9430A] text-white rounded-[16px] p-7 sm:p-9 shadow-lg border border-white/15 transition-all duration-200 hover:-translate-y-1 hover:shadow-xl">
@@ -19,7 +20,7 @@ export default function PricingCard({ plan }) {
           </span>
         </div>
 
-        {/* Innovative Scope & Cadence Block (Replacing numeric dollar pricing) */}
+        {/* Innovative Scope & Cadence Block */}
         <div className="mt-6 mb-6 p-4 rounded-xl bg-black/20 border border-white/10">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-2">
@@ -60,10 +61,10 @@ export default function PricingCard({ plan }) {
         </div>
       </div>
 
-      {/* Full width white button at bottom */}
+      {/* Full width white button at bottom triggering booking modal */}
       <div className="mt-auto pt-4">
         <Button
-          href="#contact"
+          onClick={() => openBooking(plan.name)}
           variant="white"
           size="lg"
           className="w-full text-center uppercase tracking-wider font-semibold group flex items-center justify-center gap-2"

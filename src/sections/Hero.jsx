@@ -1,10 +1,12 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { siteContent } from '../data/siteContent.js';
+import { useBooking } from '../context/BookingContext.jsx';
 import Button from '../components/Button.jsx';
 
 export default function Hero() {
   const { hero } = siteContent;
+  const { openBooking } = useBooking();
 
   return (
     <section
@@ -35,7 +37,7 @@ export default function Hero() {
           {/* Right CTAs Block (stacks right-aligned or top-right as in reference) */}
           <div className="flex flex-col sm:flex-row lg:flex-col items-stretch sm:items-center lg:items-end gap-3.5 shrink-0 pt-2 lg:pt-0">
             <Button
-              href={hero.primaryCta.href}
+              onClick={() => openBooking('Starter Plan')}
               variant="primary"
               size="lg"
               className="w-full sm:w-auto text-center uppercase tracking-wider font-semibold"

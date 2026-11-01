@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { siteContent } from '../data/siteContent.js';
+import { useBooking } from '../context/BookingContext.jsx';
 import Button from './Button.jsx';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { navigation, brand } = siteContent;
+  const { openBooking } = useBooking();
 
   // Close mobile menu on Escape key
   useEffect(() => {
@@ -73,7 +75,7 @@ export default function Header() {
           {/* Zone 3: CTA Action & Mobile Hamburger */}
           <div className="flex items-center gap-3">
             <Button
-              href="#plans"
+              onClick={() => openBooking('Starter Plan')}
               variant="primary"
               size="sm"
               className="hidden sm:inline-flex text-xs uppercase tracking-wider"
@@ -118,10 +120,12 @@ export default function Header() {
               ))}
               <div className="pt-4 border-t border-[#E5CDBB]/70 flex flex-col gap-2">
                 <Button
-                  href="#plans"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    openBooking('Starter Plan');
+                  }}
                   variant="primary"
                   className="w-full text-center"
-                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Start Your Project
                 </Button>

@@ -69,9 +69,6 @@ export default function FAQAccordion({ items }) {
                   }`}
                 >
                   {item.answer}
-                  <p className="mt-3 text-xs italic opacity-75">
-                    // PLACEHOLDER – review before launch
-                  </p>
                 </div>
               </div>
             )}

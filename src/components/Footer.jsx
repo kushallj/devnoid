@@ -29,9 +29,6 @@ export default function Footer() {
             <p className="text-sm text-[#FBF5EF]/85 leading-relaxed max-w-sm">
               {footer.blurb}
             </p>
-            <p className="text-xs text-[#FBF5EF]/60 italic">
-              // PLACEHOLDER – review before launch
-            </p>
 
             {/* Social Icons */}
             <div className="flex items-center gap-3 pt-2">
@@ -117,9 +114,6 @@ export default function Footer() {
                 );
               })}
             </ul>
-            <p className="mt-3 text-xs text-[#FBF5EF]/60 italic">
-              // PLACEHOLDER – contact info for review
-            </p>
           </div>
         </div>
 

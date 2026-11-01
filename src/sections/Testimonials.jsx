@@ -17,7 +17,7 @@ export default function Testimonials() {
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
           <SectionHeading
             title={testimonials.title}
-            description="Real feedback from founder and engineering teams who scaled their digital platforms with DevLix."
+            description="Real feedback from founder and engineering teams who scaled their digital platforms with Devnoid."
             align="center"
           />
         </div>

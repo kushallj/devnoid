@@ -240,7 +240,7 @@ export default function Products() {
                     </p>
                   </div>
                   <div className="mt-4 pt-3 border-t border-[#E5CDBB]/50 flex items-center justify-between text-xs text-[#6B5646]">
-                    <span>// PLACEHOLDER product</span>
+                    <span className="font-mono text-[11px] uppercase tracking-wider text-[#6B5646]">Architecture</span>
                     <span className="font-medium text-[#A9430A]">Explore &rarr;</span>
                   </div>
                 </div>

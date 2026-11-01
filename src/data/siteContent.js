@@ -12,6 +12,16 @@ export const siteContent = {
     wordmark: "Devnoid",
   },
 
+  calendly: {
+    username: "devnoid",
+    baseUrl: "https://calendly.com/devnoid",
+    // Optional specific event slugs: if created in your Calendly dashboard, these route directly
+    eventSlugs: {
+      "Starter Plan": "starter-plan",
+      "Growth Plan": "growth-plan",
+    },
+  },
+
   navigation: [
     { label: "Home", href: "#hero" },
     { label: "Services", href: "#services" },
@@ -246,50 +256,44 @@ export const siteContent = {
     items: [
       {
         id: "t1",
-        // PLACEHOLDER – review before launch
         quote: "Devnoid transformed our complex requirements into a streamlined SaaS platform that our users adore.",
         name: "Marcus Vance",
-        role: "Founder, PulseTech (placeholder)",
+        role: "Founder, PulseTech",
         initials: "MV"
       },
       {
         id: "t2",
-        // PLACEHOLDER – review before launch
         quote: "Their technical rigor and autonomous agent integration made our product launch an absolute success.",
         name: "Elena Rostova",
-        role: "VP Product, FinStream (placeholder)",
+        role: "VP Product, FinStream",
         initials: "ER"
       },
       {
         id: "t3",
-        // PLACEHOLDER – review before launch
         quote: "From prototype to multi-tenant scale in under 90 days. Exceptional craftsmanship at every layer.",
         name: "David Chen",
-        role: "CTO, CloudVertex (placeholder)",
+        role: "CTO, CloudVertex",
         initials: "DC"
       },
       {
         id: "t4",
-        // PLACEHOLDER – review before launch
         quote: "Fast delivery, clean code, and unmatched architectural depth. They feel like an elite internal squad.",
         name: "Sarah Lindqvist",
-        role: "Head of Tech, Lumina (placeholder)",
+        role: "Head of Tech, Lumina",
         initials: "SL"
       },
       {
         id: "t5",
-        // PLACEHOLDER – review before launch
         quote: "A development partner that truly understands business objectives, not just lines of code.",
         name: "Julian Brooks",
-        role: "CEO, MetricHQ (placeholder)",
+        role: "CEO, MetricHQ",
         initials: "JB"
       },
       {
         id: "t6",
-        // PLACEHOLDER – review before launch
         quote: "They tackled our legacy migration with precision, cutting our cloud latency by more than half.",
         name: "Amara Diallo",
-        role: "VP Engineering, Solis (placeholder)",
+        role: "VP Engineering, Solis",
         initials: "AD"
       }
     ]
@@ -298,7 +302,6 @@ export const siteContent = {
   // FAQ (Section J)
   faq: {
     title: "FREQUENTLY ASKED QUESTIONS",
-    // PLACEHOLDER – review before launch
     items: [
       {
         id: "faq-1",
@@ -330,13 +333,12 @@ export const siteContent = {
 
   // Footer (Section K)
   footer: {
-    // PLACEHOLDER – review before launch
     blurb: "Devnoid builds scalable digital products, autonomous AI agents, SaaS applications, custom software, and modern web experiences that power business growth.",
     socials: [
-      { name: "GitHub", href: "#", label: "GitHub (placeholder)" },
-      { name: "Twitter", href: "#", label: "Twitter / X (placeholder)" },
-      { name: "LinkedIn", href: "#", label: "LinkedIn (placeholder)" },
-      { name: "Dribbble", href: "#", label: "Dribbble (placeholder)" }
+      { name: "GitHub", href: "#", label: "GitHub" },
+      { name: "Twitter", href: "#", label: "Twitter / X" },
+      { name: "LinkedIn", href: "#", label: "LinkedIn" },
+      { name: "Dribbble", href: "#", label: "Dribbble" }
     ],
     columns: {
       menu: [

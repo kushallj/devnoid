@@ -76,9 +76,6 @@ export default function Highlights() {
                 <p className="text-sm text-[#FBF5EF]/90 leading-relaxed max-w-sm">
                   {panel.description}
                 </p>
-                <p className="mt-2 text-xs text-[#FBF5EF]/60 italic">
-                  // PLACEHOLDER – review before launch
-                </p>
               </div>
             </div>
           ))}

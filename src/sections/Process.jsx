@@ -28,9 +28,6 @@ export default function Process() {
               <p className="mt-5 text-base sm:text-lg text-[#FBF5EF]/90 leading-relaxed">
                 {process.description}
               </p>
-              <p className="mt-3 text-xs text-[#FBF5EF]/60 italic">
-                // PLACEHOLDER – review before launch
-              </p>
             </div>
 
             {/* Right Column: Stacked timeline blocks */}
